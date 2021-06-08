@@ -1,0 +1,35 @@
+includes:
+  - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+  ignoreErrors:
+    - '#Cannot call method [a-zA-Z0-9():]+ on .+|null.#'
+
+    -
+      message: '#Call to an undefined method [a-zA-Z0-9():]+#'
+      paths:
+            - app/Providers/DuskServiceProvider.php
+
+    -
+      message: '#Call to an undefined method [a-zA-Z0-9():]+#'
+      paths:
+            - tests/Browser/Servants/Inscriptions/CreateTest.php
+
+  level: 6
+  paths:
+    - app
+    - tests
+  scanDirectories:
+    - vendor/nesbot/carbon/src
+  excludes_analyse:
+    - app/Console/Kernel.php
+    - app/Exceptions/Handler.php
+    - app/Http/Kernel.php
+    - app/Http/Middleware/CheckForMaintenanceMode.php
+    - app/Http/Controllers/Auth/LoginController.php
+    - app/Http/Controllers/Admin/Auth/LoginController.php
+    - app/Models/User.php
+    - app/Http/Controllers/Admin/ProfileController.php
+    - app/Http/Controllers/Admin/Auth/ResetPasswordController.php
+    - app/Http/Controllers/Servant/Auth/ResetPasswordController.php
+  checkMissingIterableValueType: false

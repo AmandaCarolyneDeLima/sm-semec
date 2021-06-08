@@ -1,0 +1,1 @@
+@include('servant.edicts._edict_row',['route' => route('servant.new.inscription', $edict->id)])

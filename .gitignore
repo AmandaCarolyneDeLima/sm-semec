@@ -1,0 +1,54 @@
+##
+# PHP
+################
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/report
+/build
+/reports
+clover.xml
+
+##
+# ASSETS
+################
+/public/assets/*
+/public/css/*
+/public/js/*
+/public/images/*
+/public/uploads/*
+
+##
+# NPM
+################
+/node_modules
+/v8-compile-cache-0
+npm-debug.log
+
+##
+# YARN
+################
+yarn-error.log
+.yarn-meta
+.pnp.js
+.pnp
+.yarn/*
+
+##
+# CYPRESS
+################
+/cypress/videos
+/cypress/screenshots
+
+##
+# Others
+################
+.DS_Store
+.ssh
+/database/data/*

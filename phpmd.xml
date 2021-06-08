@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Custom_PHPMD">
+    <description>Custom ruleset PHPMD</description>
+    <!--Add a rule to be executed-->
+    <!-- List of rules https://phpmd.org/rules/index.html -->
+    <rule ref="rulesets/cleancode.xml">
+        <!-- Rule to exclude -->
+        <exclude name="StaticAccess"/>
+    </rule>
+    <rule ref="rulesets/controversial.xml"/>
+    <rule ref="rulesets/design.xml"/>
+    <rule ref="rulesets/unusedcode.xml"/>
+    <rule ref="rulesets/codesize.xml/TooManyPublicMethods">
+        <properties>
+            <property name="maxmethods" value="12" />
+        </properties>
+    </rule>
+
+    <exclude-pattern>app/Console/Kernel.php</exclude-pattern>
+    <exclude-pattern>tests/DuskTestCase.php</exclude-pattern>
+    <exclude-pattern>app/Http/Controllers/Servant/InscriptionsController.php</exclude-pattern>
+    <exclude-pattern>app/Console/Commands/Populate/Removals.php</exclude-pattern>
+</ruleset>
